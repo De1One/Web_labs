@@ -1,21 +1,7 @@
 <?php
-require_once 'config.php';
-require_once 'database.php';
-require_once 'build.php';
-
-$dbConnection = connectToDatabase();
-$messageBoardCategories = getCategory($dbConnection);
-$messageBoardItems = getItems($dbConnection);
-
-$config = [
-    'tableHeaders' => [
-        'email' => 'Электронная почта',
-        'category' => 'Категория объявления',
-        'title' => 'Заголовок объявления',
-        'description' => 'Текст объявления'
-    ]
-];
-
+use Connection\Config;
+use Getting\CategoriesFromDatabase;
+use Getting\ItemsFromDatabase;
 ?>
 
 <!doctype html>
@@ -24,39 +10,18 @@ $config = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
     <title>Доска объявлений</title>
 </head>
 <body>
 
-<style>
-
-    form {
-        display: table-caption;
-        font-family: 'Roboto', sans-serif;
-        padding: 10px;
-    }
-
-    caption {
-        margin-bottom: 10px;
-    }
-
-    table, td {
-        margin-top: 20px;
-        border: 0.75px solid black;
-        padding: 3px;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-    }
-
-</style>
-
-<form action="lab.php" method="post" >
+<form action="lab8.php" method="post" >
     <label for="email">Email
         <input type="email" name="email">
     </label>
     <label for="message-category">
         <select name="message-category">
-            <?php foreach ($messageBoardCategories as $categoryName):?>
+            <?php foreach (CategoriesFromDatabase::getCategory() as $categoryName):?>
                 <option value="<?= htmlspecialchars($categoryName)?>"><?= htmlspecialchars($categoryName)?></option>
             <?php endforeach;?>
         </select>
@@ -73,11 +38,11 @@ $config = [
 <table>
     <caption>Объявления</caption>
     <tr>
-        <?php foreach ($config['tableHeaders'] as $columnName):?>
+        <?php foreach (Config::getTableHeader() as $columnName):?>
             <td><?= htmlspecialchars($columnName)?></td>
         <?php endforeach;?>
     </tr>
-    <?php foreach ($messageBoardItems as $row):?>
+    <?php foreach (ItemsFromDatabase::getItems() as $row):?>
         <tr>
             <?php foreach ($row as $value):?>
                 <td><?= htmlspecialchars($value)?></td>
