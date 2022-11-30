@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="023f71b3-0bbb-4f23-8de8-cf35696cb6c8" name="Changes" comment="lab6" />
+    <list default="true" id="023f71b3-0bbb-4f23-8de8-cf35696cb6c8" name="Changes" comment="lab7" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +12,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lab6" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -40,6 +45,7 @@
       <updated>1669824373205</updated>
       <workItem from="1669824376162" duration="244000" />
       <workItem from="1669831836876" duration="216000" />
+      <workItem from="1669846496237" duration="488000" />
     </task>
     <task id="LOCAL-00001" summary="lab6">
       <created>1669824540841</created>
@@ -62,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669831917514</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lab7">
+      <created>1669846796064</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669846796064</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,6 +94,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lab6" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab6" />
+    <MESSAGE value="lab7" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab7" />
   </component>
 </project>
